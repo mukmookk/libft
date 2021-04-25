@@ -1,0 +1,39 @@
+General Instructions
+
+You must create the following functions in the order you believe makes most sense. Projects encourage you to use the functions you have already coded to write the next ones. The difficulty level does not increase by assignment and the project has not been structured in any specific way. It is similar to a video game, where you can complete quests in the order of the choosing and use the loot from the previous quest to solve the next ones.
+
+Your project must be written in accordance with the Norm.
+
+Your functions should not quit unexpectedly apart from undefined behaviors.
+    1. segmentation fault
+    2. bus error
+    3. double free
+    4. etc
+If this happens, your project will be considered non functional and will receive a 0 during the defence
+
+All heap allocated memory space must be properly freed when neccessary.
+
+You must submit a file named author containing your username followed by a '\n' at the root of your repository
+
+You must submit a C file for each function you create, as well as a libft.h file, which will contain all the necessary prototypes as well as macros and typedefs you might need. All those fils must be at the root of you repo.
+
+You must submit a Makefile which will compile your source files to a static library libft.a
+
+Your Makefile must at least contain the following rules. (In the order that you will see fit)
+    1. $(Name)
+    2. all
+    3. clean
+    4. fclean
+    5. re
+
+Your Makefile must comfile your work with the flags -Wall -Wextra and -Werror
+
+Only the follwoing libft functions are allowed
+    1. malloc(3)
+    2. free(3)
+    3. write(2)
+And their usage is restricted. See below.
+
+You must include the necessary include system files to use one or more of the three authorized functions in your .c files. The only additional systems include file you are allowed to use is string.h to have access to the constant NULL and to the type size_t. Everything else if forbidden.
+
+We encourage you to create test programs for your library even though this work won't have to be submitted and won't be graded. It will give you to a chance to easily test your work and your peers' work. You will find those tests especially useful during your defence. Indeed, during defence, you are free to use your tests and/or the tests of the peer your are correcting.

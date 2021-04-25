@@ -1,0 +1,53 @@
+Static functions in C
+
+By default all functions are implicitly decalred as extern, which means they're visible across translation units.
+But when we use static it restricts visibility of the function to the translation unit in which it's defined.
+So we can say
+"Functions that are visible only to to other functions in the same file are known as static functions"
+
+Let use try out some code about static functions.
+
+main.c
+#include "header.h"
+
+int main()
+{
+    hello();
+    return 0;
+}
+
+func.c
+#include "header.h"
+
+void hello()
+{
+    printf("Hello World!\n");
+}
+
+header.h
+#include <stdio.h>
+
+static void hello();
+
+
+If we compile above code it fails as shown below
+
+$gcc main.c func.c
+header.h:4: warning: "hello" used but never defined
+/tmp/ccaHx5Ic.o: In function 'main':
+main.c(.text+0x12): undefined reference to 'hello'
+collect2: Id returbed 1 exit status
+
+If fails in Linking since function hello() is declared as static and its definition is accessible only within funct.c file but not for main.c. All the functions within func.c can access hello() function but not by functions outside func.c file.
+
+Using this concept we can restrict others from accessing the internal functions which we want to hide from outside world.
+Now we don't need to create private header files for internal functions.
+
+Note:
+For some reason, static has different meaning in different contexts.
+
+1. When specified on a function declaration, it makes the function loacl to the file.
+2. When specified with a variable inside a function, it allows the variable to retain its value between calls to the function.
+
+It seems a little strange that the same keyword has such differnet meanings
+

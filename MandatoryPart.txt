@@ -1,0 +1,57 @@
+Mandatory part
+
+V.1     Technical considerations
+
+Your libft.h file can contain macros and typedefs if needed.
+
+A string must Always end with a '\0', even if it is not included in the function's description, unless explicitly stated otherwise.
+
+It is forbidden to use global variables.
+
+If you need sub-functions to write a complex function, you must define these sub-functions as static as stipulated in the Norm.
+
+You must pay attention to your types and wisely use the cast when needed, especally when a void* type is involved. Generally speaking, avoid implicit casts.
+
+Example:
+
+    char    *str;
+    str = malloc(42 * sizeof(*str));            // Wrong ! Malloc returns a void * (implicit cast)
+    str = (char *) malloc(42 * sizeof(*str));   // Right ! (emplicit cast)
+
+V.2     Part 1 - Libc functions
+
+In this first part, you must re-code a set of the libc functions, as defined in their man. Your functions will need to present the same prototype and behaviors as the originals. Your functions' names must be prefixed by "ft_". For instance strlen becomes ft_strlen.
+
+Some of the functions' prototypes you have to re-code use the "restrict" qualifer. This keyworkd is part of the C99 standard.
+It is therefore forbidden to include it in your prototypes and to complie it with the flag -std=c99
+
+You must re-code the following functions.
+
+1. memset
+2. bzero
+3. memcpy
+4. memcopy
+5. memmove
+6. memchr
+7. memcmp
+8. strlen
+9. strdup
+10. strcpy
+11. strncpy
+12. strcat
+13. strncat
+14. strlcat
+15. strchr
+16. strrchr
+17. strstr
+18. strnstr
+19. strcmp
+20. strncmp
+21. atoi
+22. isalpha
+23. isdigit
+24. isalnum
+25. isascii
+26. isprint
+27. toupper
+28. tolower
