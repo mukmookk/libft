@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/04 21:45:28 by youngmki          #+#    #+#             */
-/*   Updated: 2021/05/05 03:17:11 by youngmki         ###   ########.fr       */
+/*   Created: 2021/05/05 01:14:34 by youngmki          #+#    #+#             */
+/*   Updated: 2021/05/05 02:58:50 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *dst, const void *src, size_t n)
+void			*ft_memccpy(void *dst, const void *src, int c, size_t len)
 {
-	unsigned char	*n_dst;
+	unsigned char	*n_dest;
 	unsigned char	*n_src;
+	int				target;
 	size_t			i;
 
-	n_dst = (unsigned char *)dst;
+	n_dest = dst;
 	n_src = (unsigned char *)src;
+	target = c;
 	i = 0;
-	if (!n_dst && !n_src)
-		return (dst);
-	while (i < n)
+	if (!dst && !src)
+		return (0);
+	while (i < len)
 	{
-		*n_dst++ = *n_src++;
+		n_dest[i] = n_src[i];
+		if (n_dest[i] == c)
+			return (dst + i);
 		i++;
 	}
-	return (dst);
+	return (0);
 }

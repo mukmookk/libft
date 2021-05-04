@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/04 21:45:28 by youngmki          #+#    #+#             */
-/*   Updated: 2021/05/05 03:17:11 by youngmki         ###   ########.fr       */
+/*   Created: 2021/05/05 02:29:40 by youngmki          #+#    #+#             */
+/*   Updated: 2021/05/05 03:34:05 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *dst, const void *src, size_t n)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*n_dst;
-	unsigned char	*n_src;
-	size_t			i;
+	unsigned char		*n_dst;
+	unsigned char		*n_src;
 
-	n_dst = (unsigned char *)dst;
-	n_src = (unsigned char *)src;
-	i = 0;
-	if (!n_dst && !n_src)
-		return (dst);
-	while (i < n)
+	if (n_dst <= n_src)
 	{
-		*n_dst++ = *n_src++;
-		i++;
+		n_dst = dst;
+		n_src = (unsigned char*)src;
+		while (len--)
+			*n_dst++ = *n_src++;
+	}
+	else
+	{
+		n_dst = dst + len;
+		n_src = (unsigned char*)src;
+		n_src += len;
+		while (len--)
+			*(--n_dst) = *(--n_src);
 	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 18:24:37 by mook              #+#    #+#             */
-/*   Updated: 2021/05/04 21:43:10 by youngmki         ###   ########.fr       */
+/*   Updated: 2021/05/05 05:10:17 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 /*********************************************************************************
 									* lib c funtions *
  * *******************************************************************************/
@@ -24,19 +25,14 @@ Your functions will need to present the same prototype and behaviors as the orig
 Your functions’ names must be prefixed by “ft_”. For instance strlen becomes ft_strlen.*/
 
 void		*ft_memset(void *s, int c, size_t len)
-void		bzero(void *s, size_t n);
-//##########################progress bar########################################/
-// • memcpy 
-// void		*memcpy(void *restrict dst, const void *restrict src, size_t n);
-// • memccpy
-// void		*memccpy(void *restrict dst, cosnt void *restirc src, int c, size_t n);
-// • memmove 
-// void		*memmove(void *dst, cosnt void *src, size_t len);
+void		ft_bzero(void *s, size_t n);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
+void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void		*ft_memmove(void *dst, const void *src, size_t len);
+void 		*ft_memchr(const void *s, int c, size_t );
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
-// • memchr 
-// void *memchr(const void *s, int c, size_t );
-// • memcmp 
-// int memcmp(const void *s1, const void *s2, size_t n);
+//##########################progress bar########################################/
 // • strlen
 // size_t strlen(cosnt char *s);
 // • strdup 

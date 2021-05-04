@@ -1,0 +1,3 @@
+리턴 값을 유심히 살펴볼 필요가 있음 
+
+the copy stops and a pointer to the byte 'after' the copy of c in thestring dst is returned.

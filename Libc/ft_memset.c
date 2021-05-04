@@ -6,7 +6,7 @@
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 12:00:57 by youngmki          #+#    #+#             */
-/*   Updated: 2021/05/04 22:10:02 by youngmki         ###   ########.fr       */
+/*   Updated: 2021/05/05 03:24:25 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void		*ft_memcpy(void *dst, const void *src, size_t n)
 	n_dst = (unsigned char *)dst;
 	n_src = (unsigned char *)src;
 	i = 0;
-	if (!n_dst || !n_src || n <= 0)
+	if (!n_dst && !n_src)
 		return (dst);
-	while (!dst || !src || i < n)
+	while (i < n)
 	{
 		*n_dst++ = *n_src++;
 		i++;

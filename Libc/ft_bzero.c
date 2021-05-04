@@ -6,11 +6,13 @@
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 21:31:12 by youngmki          #+#    #+#             */
-/*   Updated: 2021/05/04 21:42:43 by youngmki         ###   ########.fr       */
+/*   Updated: 2021/05/05 03:33:34 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
+#include "libft.h"
+
+void		ft_bzero(void *s, size_t n)
 {
 	int i;
 
