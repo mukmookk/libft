@@ -6,7 +6,7 @@
 /*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 18:24:37 by mook              #+#    #+#             */
-/*   Updated: 2021/05/03 16:51:52 by youngmki         ###   ########.fr       */
+/*   Updated: 2021/05/04 21:43:10 by youngmki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@
 /* In this first part, you must re-code a set of the libc functions, as defined in their man. 
 Your functions will need to present the same prototype and behaviors as the orig- inals. 
 Your functions’ names must be prefixed by “ft_”. For instance strlen becomes ft_strlen.*/
-//##########################progress bar########################################/
-// • memset 
+
 void		*ft_memset(void *s, int c, size_t len)
-// • bzero
-// void		bzero(void *s, size_t n);
+void		bzero(void *s, size_t n);
+//##########################progress bar########################################/
 // • memcpy 
 // void		*memcpy(void *restrict dst, const void *restrict src, size_t n);
 // • memccpy
