@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youngmki <youngmki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: mook <mook@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/30 18:24:37 by mook              #+#    #+#             */
-/*   Updated: 2021/05/05 05:10:17 by youngmki         ###   ########.fr       */
+/*   Updated: 2021/05/06 23:43:03 by mook             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,8 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void 		*ft_memchr(const void *s, int c, size_t );
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
+size_t		ft_strlen(cosnt char *s);
 //##########################progress bar########################################/
-// • strlen
-// size_t strlen(cosnt char *s);
 // • strdup 
 // char *strdup(const char *s1);
 // • strcpy 
